@@ -35,7 +35,6 @@ const LoginForm = () => {
   };
 
   return (
-    <div> 
       <form className="flex flex-col ml-3 gap-y-8 w-[85%] mt-8" onSubmit={handleSubmit}>
     {/* email addresd */}
       <div className="flex flex-col relative">
@@ -75,8 +74,6 @@ const LoginForm = () => {
         text='Login' 
       />
     </form>
-    {/* <button onClick={() => navigate('/profile') }> Go To Profile </button> */}
-    </div>
   );
 };
 
