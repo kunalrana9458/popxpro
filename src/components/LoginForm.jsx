@@ -75,7 +75,7 @@ const LoginForm = () => {
         text='Login' 
       />
     </form>
-    <button onClick={() => navigate('/profile') }> Go To Profile </button>
+    {/* <button onClick={() => navigate('/profile') }> Go To Profile </button> */}
     </div>
   );
 };
