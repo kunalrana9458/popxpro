@@ -6,6 +6,8 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -32,7 +34,8 @@ const LoginForm = () => {
   };
 
   return (
-    <form className="flex flex-col ml-3 gap-y-8 w-[85%] mt-8" onSubmit={handleSubmit}>
+    <div> 
+      <form className="flex flex-col ml-3 gap-y-8 w-[85%] mt-8" onSubmit={handleSubmit}>
     {/* email addresd */}
       <div className="flex flex-col relative">
         <label htmlFor="emailAddress" className="absolute -top-3 text-[#8057f2] font-semibold bg-[#f4f4f4] left-2 w-[135px] pl-2">
@@ -71,6 +74,8 @@ const LoginForm = () => {
         text='Login' 
       />
     </form>
+    <button onClick={() => navigate('/profile') }> Go To Profile </button>
+    </div>
   );
 };
 
