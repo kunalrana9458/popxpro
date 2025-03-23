@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 import IconButton from "./IconButton";
+
 
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("")
 
+  const navigate = useNavigate()
 
 
   const handleSubmit = async (e) => {
@@ -73,6 +76,10 @@ const LoginForm = () => {
         customClass='bg-[#767676] text-lg font-semibold opacity-[60%] text-[#f4f4f4] p-y-2'
         text='Login' 
       />
+
+      <button
+      type="button"
+      onClick={() => navigate("/profile")}>Go To Profile</button>
     </form>
   );
 };
