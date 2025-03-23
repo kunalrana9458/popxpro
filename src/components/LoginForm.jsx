@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 import IconButton from "./IconButton";
-
+import {useNavigate} from 'react-router-dom'
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = "https://example.com/api/login"; 
+    // const apiUrl = "https://example.com/api/login"; 
+    navigate("/profile")
 
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+  //   try {
+  //     const response = await fetch(apiUrl, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ email, password }),
+  //     });
 
-      const result = await response.json();
-      if (response.ok) {
-        console.log("Login successful:", result);
-      } else {
-        console.error("Login failed:", result);
-      }
-    } catch (error) {
-      console.error("Error during API call:", error);
-    }
-  };
+  //     const result = await response.json();
+  //     if (response.ok) {
+  //       console.log("Login successful:", result);
+  //     } else {
+  //       console.error("Login failed:", result);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error during API call:", error);
+  //   }
+  // };
 
   return (
     <div> 
