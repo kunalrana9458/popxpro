@@ -10,7 +10,7 @@ import Profile from './pages/Profile'
 function App() {
 
   return (
-       <div className='border bg-[#f4f4f4]'>
+       <div className='border bg-[#f4f4f4] h-[100vh]'>
         <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/login' element={<Login />} />
